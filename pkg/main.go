@@ -1,12 +1,13 @@
 package main
 
 import (
+	"net/http"
+
 	"github.com/golang/protobuf/proto"
 	"github.com/hidexir/protobuf-json-api/proto/pb"
 	"github.com/k0kubun/pp"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"net/http"
 )
 
 func main() {
@@ -36,12 +37,12 @@ func main() {
 func ToGetPrefecturesResponse() (res pb.GetUsersRes) {
 	user := []*pb.Users{
 		{
-			Id:     12,
-			Name:   "123",
+			Id:   12,
+			Name: "123",
 		},
 		{
-			Id:     13,
-			Name:   "ksljfalksj",
+			Id:   13,
+			Name: "ksljfalksj",
 		},
 	}
 	res = pb.GetUsersRes{
